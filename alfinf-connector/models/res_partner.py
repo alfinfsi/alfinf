@@ -10,3 +10,9 @@ class ResPartner(models.Model):
     is_trace = fields.Boolean(
         string='Traza'
     )
+    alfinf_trace_ids = fields.One2many(
+        string='Traza',
+        comodel_name='alfinf.trace',
+        inverse_name='res_partner_id'
+    )
+

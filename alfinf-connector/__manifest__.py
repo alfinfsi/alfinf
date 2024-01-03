@@ -18,6 +18,7 @@
         "views/sale_order_view.xml",
         "views/res_partner_view.xml",
         "views/product_template_view.xml",
+        "views/alfinf_trace_view.xml",
     ],
     "installable": True,
 }

@@ -1,0 +1,21 @@
+# Copyright 2024 Manuel Calero - Alfinf
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
+
+{
+    "name": "Alfinf Connector",
+    "summary": "Alfinf Connector",
+    "version": "16.0.1.0.0",
+    "development_status": "Beta",
+    "license": "AGPL-3",
+    "author": "Alfinf",
+    "website": "https://github.com/alfinfsi/",
+    "category": "Connector",
+    "depends": [
+        "sale",
+        "sale_management",
+    ],
+    "data": [
+        "views/sale_order_view.xml",
+    ],
+    "installable": True,
+}

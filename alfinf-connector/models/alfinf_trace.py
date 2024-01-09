@@ -6,11 +6,14 @@ from odoo import fields, models
 
 class AlfinfTrace(models.Model):
     _name = "alfinf.trace"
+    _inherit = ["mail.thread"]
 
     name = fields.Char(
-        string="Nombre"
+        string="Nombre",
+        tracking=True
     )
     res_partner_id = fields.Many2one(
         string="Cliente",
         comodel_name="res.partner"
     )
+    active = fields.Boolean(default=True)

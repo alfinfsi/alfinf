@@ -12,7 +12,7 @@
 
             </xpath>
             <xpath expr="//page[@name='general_information']" position="after">
-                <page name="formato" string="Formato" attrs="{'invisible': [('is_format', '=', False)]}">
+                <page name="formato" string="Formato" attrs="{'invisible': [('is_format', '=', False)]}" class="d-flex">
                     <span class="d-inline-block">
                         <field name="is_in"/>
                         <label for="is_in"/>
@@ -20,6 +20,24 @@
                     <span class="d-inline-block">
                         <field name="is_out"/>
                         <label for="is_out"/>
+                    </span>
+
+                    <!-- Añadir nuevos campos aquí -->
+                    <span class="d-inline-block">
+                        <label for="denominacion"/>
+                        <field name="denominacion"/>
+                    </span>
+                    <span class="d-inline-block">
+                        <label for="ft_grnvase"/>
+                        <field name="ft_grnvase"/>
+                    </span>
+                    <span class="d-inline-block">
+                        <label for="euro_coste_envase"/>
+                        <field name="euro_coste_envase"/>
+                    </span>
+                    <span class="d-inline-block">
+                        <label for="granel"/>
+                        <field name="granel"/>
                     </span>
                 </page>
             </xpath>

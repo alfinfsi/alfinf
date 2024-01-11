@@ -13,32 +13,63 @@
             </xpath>
             <xpath expr="//page[@name='general_information']" position="after">
                 <page name="formato" string="Formato" attrs="{'invisible': [('is_format', '=', False)]}" class="d-flex">
-                    <span class="d-inline-block">
-                        <field name="is_in"/>
-                        <label for="is_in"/>
-                    </span>
-                    <span class="d-inline-block">
-                        <field name="is_out"/>
-                        <label for="is_out"/>
-                    </span>
-
-                    <!-- Añadir nuevos campos aquí -->
-                    <span class="d-inline-block">
-                        <label for="denominacion"/>
-                        <field name="denominacion"/>
-                    </span>
-                    <span class="d-inline-block">
-                        <label for="ft_grnvase"/>
-                        <field name="ft_grnvase"/>
-                    </span>
-                    <span class="d-inline-block">
-                        <label for="euro_coste_envase"/>
-                        <field name="euro_coste_envase"/>
-                    </span>
-                    <span class="d-inline-block">
-                        <label for="granel"/>
-                        <field name="granel"/>
-                    </span>
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <label for="denominacion"/>
+                            <field name="denominacion"/>
+                        </div>
+                            <!-- Añadir nuevos campos aquí -->
+                        <div>
+                            <label for="is_in"/>
+                            <field name="is_in"/>
+                        </div>
+                        <div>
+                            <label for="is_out"/>
+                            <field name="is_out"/>
+                        </div>
+                        <div>
+                            <label for="ft_grnvase"/>
+                            <field name="ft_grnvase"/>
+                        </div>
+                    </div>
+                        <span class="d-inline-block">
+                            <label for="euro_coste_envase"/>
+                            <field name="euro_coste_envase"/>
+                        </span>
+                        <span class="d-inline-block">
+                            <label for="coste_formato"/>
+                            <field name="coste_formato"/>
+                        </span>
+                        <span class="d-inline-block">
+                            <label for="granel"/>
+                            <field name="granel"/>
+                        </span>
+                        <span class="d-inline-block">
+                            <label for="unidades"/>
+                            <field name="unidades"/>
+                        </span>
+                        <span class="d-inline-block">
+                            <label for="piezas"/>
+                            <field name="piezas"/>
+                        </span>
+                        <span class="d-inline-block">
+                            <label for="gr_pieza"/>
+                            <field name="gr_pieza"/>
+                        </span>
+                        <span class="d-inline-block">
+                            <label for="categoria"/>
+                            <field name="categoria"/>
+                        </span>
+                    <fieldset>
+                        <span class="d-inline-block">
+                            <label for="peso_entrada"/>
+                            <field name="peso_entrada"/>
+                        </span>
+                        <span class="d-inline-block">
+                            <label for="peso_salida"/>
+                            <field name="peso_salida"/>
+                        </span>
+                    </fieldset>
                 </page>
             </xpath>
         </field>

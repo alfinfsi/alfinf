@@ -28,9 +28,41 @@ class ProductTemplate(models.Model):
     denominacion = fields.Char(
         string="Denominacion"
     )
-    ft_grnvase = fields.Integer(
+    ft_grnvase = fields.Float(
         string="Peso del envase"
     )
     euro_coste_envase = fields.Integer(
         string="Coste por envase"
+    )
+    piezas = fields.Integer(
+        string="Piezas"
+    )
+    gr_pieza = fields.Float(
+        string="gr piezas",
+        digits=(16, 2)
+    )
+    categoria = fields.Integer(
+        string="Categoria",
+        default=1,
+        domain=[
+            ('>=', 0)
+        ]
+    )
+    unidades = fields.Integer(
+        string="Unidades",
+        domain=[
+            ('>=', 1)
+        ]
+    )
+    peso_entrada = fields.Float(
+        string="Peso entrada",
+        digits=(16, 2)
+    )
+    peso_salida = fields.Float(
+        string="Peso salida",
+        digits=(16, 2)
+    )
+    coste_formato = fields.Float(
+        string="Coste formato",
+        digits=(16, 2)
     )

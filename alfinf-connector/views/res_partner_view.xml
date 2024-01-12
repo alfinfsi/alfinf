@@ -8,13 +8,13 @@
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='vat']" position="after">
                     <field name="is_trace"/>
+                    <field name="cont_id"/>
                 </xpath>
                 <notebook position="inside">
                     <page
                         name="trace_page"
                         string="Trazas"
-                        attrs="{'invisible': [('is_trace', '!=', True)]}"
-                    >
+                        attrs="{'invisible': [('is_trace', '!=', True)]}">
                         <group string="Trazas" name="traces">
                             <field name="alfinf_trace_ids" nolabel="1" colspan="2">
                                 <tree editable="bottom">

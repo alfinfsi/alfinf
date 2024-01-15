@@ -13,6 +13,12 @@ class ResPartner(models.Model):
     cont_id = fields.Integer(
         string='Id contabilidad'
     )
+    cl_cif = fields.Integer(
+        string='CIF'
+    )
+    idniff = fields.Integer(
+        string='ID NIF'
+    )
     alfinf_trace_ids = fields.One2many(
         string='Traza',
         comodel_name='alfinf.trace',

@@ -1,6 +1,7 @@
 # Copyright 2024 Alberto Rodriguez - Alfinf
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
+import string
 from odoo import fields, models
 
 
@@ -15,6 +16,18 @@ class AlfinfTrace(models.Model):
     tz_hectarea = fields.Char(
         string="Traza hectarea"
     )
+    campania = fields.Char(
+        string ="Camapaña"
+    )
+    id_sector=fields.integer(
+        string ="sector"
+    )
+    eco = fields.Boolean(
+        string="Eco"
+    )
+    ggn = fields.Char(
+        string="GGN"
+    )
     tz_parcela = fields.Char(
         string="Traza parcela"
     )
@@ -24,6 +37,9 @@ class AlfinfTrace(models.Model):
     tz_planta = fields.Char(
         string="Traza planta"
     )
+    replante = fields.char(
+        string="Repelente"
+    )
     res_partner_id = fields.Many2one(
         string="Cliente",
         comodel_name="res.partner"
@@ -31,5 +47,8 @@ class AlfinfTrace(models.Model):
     variedad_id = fields.Char(
         string="Variedad"
         #comodel_name="variedad"
+    )
+    vivero_id = fields.Char(
+        string = "Vivero"
     )
     active = fields.Boolean(default=True)

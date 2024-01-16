@@ -22,10 +22,11 @@
                             <field name="alfinf_trace_ids" nolabel="1" colspan="2">
                                 <tree editable="bottom">
                                     <field name="name"/>
-                                    <field name="tz_parcela"/>
-                                    <field name="tz_columna"/>
-                                    <field name="tz_hectarea"/>
+                                    <field name="variedad_id"/>
                                     <field name="tz_planta"/>
+                                    <field name="vivero_id"/>
+                                    <field name="ggn"/>
+                                    <field name="eco"/>
                                 </tree>
                             </field>
 

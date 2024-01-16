@@ -10,7 +10,7 @@ class AlfinfTrace(models.Model):
     _inherit = ["mail.thread"]
 
     name = fields.Char(
-        string="Nombre",
+        string="Traza",
         tracking=True
     )
     tz_hectarea = fields.Char(
@@ -19,7 +19,7 @@ class AlfinfTrace(models.Model):
     campania = fields.Char(
         string ="Camapaña"
     )
-    id_sector=fields.integer(
+    id_sector=fields.Integer(
         string ="sector"
     )
     eco = fields.Boolean(
@@ -37,7 +37,7 @@ class AlfinfTrace(models.Model):
     tz_planta = fields.Char(
         string="Traza planta"
     )
-    replante = fields.char(
+    replante = fields.Char(
         string="Repelente"
     )
     res_partner_id = fields.Many2one(

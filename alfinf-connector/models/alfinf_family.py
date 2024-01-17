@@ -7,7 +7,6 @@ from odoo import fields, models
 
 class AlfinfFamily(models.Model):
     _name = "alfinf.family"
-    _inherit = ["mail.thread"]
 
     familia = fields.Char(
         string="Familia",

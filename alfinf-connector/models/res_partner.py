@@ -10,10 +10,10 @@ class ResPartner(models.Model):
     is_trace = fields.Boolean(
         string='Traza'
     )
-    cont_id = fields.Integer(
+    cont_id = fields.Char(
         string='Id contabilidad'
     )
-    cl_cif = fields.Integer(
+    cl_cif = fields.Char(
         string='CIF'
     )
     idniff = fields.Integer(

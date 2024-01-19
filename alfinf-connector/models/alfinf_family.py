@@ -7,6 +7,7 @@ from odoo import fields, models
 
 class AlfinfFamily(models.Model):
     _name = "alfinf.family"
+    _rec_name = "familia"   #En las relaciones, este es el campo que se muestra
 
     familia = fields.Char(
         string="Familia",

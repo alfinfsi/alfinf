@@ -3,3 +3,4 @@ from . import res_partner
 from . import product_template
 from . import alfinf_trace
 from . import alfinf_family
+from . import alfinf_variedad

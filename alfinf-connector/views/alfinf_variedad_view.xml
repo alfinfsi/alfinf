@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <!-- Vista de formulario para el modelo alfinf_variedad -->
+        <record id="alfinf_variedad_tree_view" model="ir.ui.view">
+        <field name="name">alfinf.variedad.tree.view</field>
+        <field name="model">alfinf.variedad</field>
+        <field eval="7" name="priority"/>
+        <field name="arch" type="xml">
+        <!-- Tabla de trazas -->
+            <tree string="Variedades" multi_edit="1" duplicate="false" sample="1">
+                <field name="nombre"/>
+                <field name="familia_id"/>
+            </tree>
+        </field>
+    </record>
+
+        <record id="alfinf_variedad_search" model="ir.ui.view">
+            <field name="name">alfinf.variedad.search</field>
+            <field name="model">alfinf.variedad</field>
+            <field name="arch" type="xml">
+                <search string="Familia busqueda">
+                    <field name="nombre" string="nombre" required="1"/>
+                    <field name="familia_id" string="familia"/>
+                </search>
+            </field>
+        </record>
+        <!-- Acción para abrir las vistas definidas anteriormente -->
+        <record id="action_alfinf_variedad" model="ir.actions.act_window">
+        <field name="name">Variedad</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">alfinf.variedad</field>
+        <field name="view_mode">kanban,tree,form,activity</field>
+        <field name="context">{}</field>
+        <field name="view_id" ref="alfinf-connector.alfinf_variedad_tree_view"/>
+        <field name="search_view_id" ref="alfinf-connector.alfinf_variedad_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Crea una nueva variedad
+            </p>
+            <p>
+                Puedes crear una nueva variedad.
+            </p>
+        </field>
+    </record>
+
+        <!-- Elemento de menú para acceder a las vistas -->
+        <menuitem
+            id="menu_alfinf_variedad"
+            name="Variedades"
+            parent="sale.sale_menu_root"
+            sequence="52"
+            action="alfinf-connector.action_alfinf_variedad"
+            groups="base.group_system"
+        />
+    </data>
+</odoo>

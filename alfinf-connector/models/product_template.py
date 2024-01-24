@@ -1,7 +1,7 @@
 # Copyright 2024 Pablo Martín - Alfinf
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
-from odoo import fields, models
+from odoo import fields, models, api
 
 
 class ProductTemplate(models.Model):
@@ -25,11 +25,8 @@ class ProductTemplate(models.Model):
         string="Kilos",
         digits=(16, 2)
     )
-    denominacion = fields.Char(
-        string="Denominacion"
-    )
     ft_grnvase = fields.Float(
-        string="Peso del envase"
+        string="Kilos Formato"
     )
     euro_coste_envase = fields.Integer(
         string="Coste por envase"
@@ -39,7 +36,7 @@ class ProductTemplate(models.Model):
     )
     gr_pieza = fields.Float(
         string="gr piezas",
-        digits=(16, 2)
+        compute='_compute_gr_piezas'
     )
     categoria = fields.Integer(
         string="Categoria",
@@ -66,3 +63,16 @@ class ProductTemplate(models.Model):
         string="Coste formato",
         digits=(16, 2)
     )
+    kg_plastico = fields.Float(
+        string="Kilos de plastico no reciclados"
+    )
+
+    # Campos calculados
+
+    @api.depends('ft_kgFormato', 'piezas')
+    def _compute_gr_piezas(self):
+        for product in self:
+            if product.piezas != 0:
+                product.gr_pieza = product.ft_kgFormato / product.piezas
+            else:
+                product.gr_pieza = 0

@@ -14,64 +14,73 @@
             <xpath expr="//page[@name='general_information']" position="after">
                 <page name="formato" string="Formato" attrs="{'invisible': [('is_format', '=', False)]}" class="d-flex">
                     <group class="d-flex justify-content-between">
-                        <div>
-                            <label for="denominacion"/>
-                            <field name="denominacion"/>
-                        </div>
                         <!-- Añadir nuevos campos aquí -->
-                        <div>
+                        <div class="d-inline-block">
                             <label for="is_in"/>
                             <field name="is_in"/>
                         </div>
-                        <div>
+                        <div class="d-inline-block">
                             <label for="is_out"/>
                             <field name="is_out"/>
                         </div>
+                        <div class="d-inline-block">
+                            <label for="granel"/>
+                            <field name="granel"/>
+                        </div>
                     </group>
                     <group class="d-flex justify-content-between">
-                        <div>
+                        <div class="d-inline-block">
                             <label for="ft_grnvase"/>
                             <field name="ft_grnvase"/>
                         </div>
+                        <div class="d-inline-block">
+                            <label for="ft_kgFormato"/>
+                            <field name="ft_kgFormato"/>
+                        </div>
+                        <div class="d-inline-block">
+                            <label for="kg_plastico"/>
+                            <field name="kg_plastico"/>
+                        </div>
+
                     </group>
-                        <span class="d-inline-block">
+                    <group class="d-flex justify-content-between">
+                        <div class="d-inline-block">
                             <label for="euro_coste_envase"/>
                             <field name="euro_coste_envase"/>
-                        </span>
-                        <span class="d-inline-block">
+                        </div>
+                        <div class="d-inline-block">
                             <label for="coste_formato"/>
                             <field name="coste_formato"/>
-                        </span>
-                        <span class="d-inline-block">
-                            <label for="granel"/>
-                            <field name="granel"/>
-                        </span>
-                        <span class="d-inline-block">
+                        </div>
+                    </group>
+                    <group class="d-flex justify-content-between">
+                        <div class="d-inline-block">
                             <label for="unidades"/>
                             <field name="unidades"/>
-                        </span>
-                        <span class="d-inline-block">
+                        </div>
+                        <div class="d-inline-block">
                             <label for="piezas"/>
                             <field name="piezas"/>
-                        </span>
-                        <span class="d-inline-block">
-                            <label for="gr_pieza"/>
-                            <field name="gr_pieza"/>
-                        </span>
-                        <span class="d-inline-block">
+                        </div>
+                        <div class="d-inline-block">
                             <label for="categoria"/>
                             <field name="categoria"/>
-                        </span>
-                    <fieldset>
-                        <span class="d-inline-block">
+                        </div>
+                    </group>
+                    <group class="d-flex justify-content-between">
+                        <div class="d-inline-block">
+                            <label for="gr_pieza"/>
+                            <field name="gr_pieza"/>
+                        </div>
+                        <div class="d-inline-block">
                             <label for="peso_entrada"/>
                             <field name="peso_entrada"/>
-                        </span>
-                        <span class="d-inline-block">
+                        </div>
+                        <div class="d-inline-block">
                             <label for="peso_salida"/>
                             <field name="peso_salida"/>
-                        </span>
-                    </fieldset>
+                        </div>
+                    </group>
                 </page>
             </xpath>
         </field>

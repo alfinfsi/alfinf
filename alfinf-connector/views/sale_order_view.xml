@@ -9,9 +9,29 @@
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='sale_order_template_id']" position="after">
                     <field name="partner_shipping_id" />
+                    <div class="d-flex flex-column">
+                        <div class="d-flex">
+                            <label for="ch_cargado"></label>
+                            <field name="ch_cargado" />
+                        </div>
+                        <div class="d-flex">
+                            <label for="ch_revisado"></label>
+                            <field name="ch_revisado" />
+                        </div>
+                        <div class="d-flex">
+                            <label for="ch_diferencia"></label>
+                            <field name="ch_diferencia" />
+                        </div>
+                    </div>
                 </xpath>
                 <xpath expr="//field[@name='payment_term_id']" position="after">
                     <field name="alfinf_avfid" />
+                    <field name="consignataria_id" />
+                    <field name="transportista_id" />
+                    <field name="matricula_camion" />
+                    <field name="matricula_remolque" />
+                    <field name="temperatura_carga" />
+
                 </xpath>
             </field>
         </record>

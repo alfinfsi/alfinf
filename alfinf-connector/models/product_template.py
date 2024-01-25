@@ -35,7 +35,7 @@ class ProductTemplate(models.Model):
         string="Piezas"
     )
     gr_pieza = fields.Float(
-        string="gr piezas",
+        string="gramos piezas",
         compute='_compute_gr_piezas'
     )
     categoria = fields.Integer(
@@ -68,7 +68,6 @@ class ProductTemplate(models.Model):
     )
 
     # Campos calculados
-
     @api.depends('ft_kgFormato', 'piezas')
     def _compute_gr_piezas(self):
         for product in self:

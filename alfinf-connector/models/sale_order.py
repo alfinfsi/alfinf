@@ -10,3 +10,29 @@ class SaleOrder(models.Model):
     alfinf_avfid = fields.Integer(
         string='Alfinf ID'
     )
+    transportista_id = fields.Many2one(
+        string='transportista',
+        comodel_name='res.partner',
+        inverse_name='id'
+    )
+    consignataria_id = fields.Char(
+        string='Consignatario'
+    )
+    matricula_camion = fields.Char(
+        string='Matricula camión'
+    )
+    matricula_remolque = fields.Char(
+        string='Matricula remolque'
+    )
+    temperatura_carga = fields.Float(
+        string='Temperatura carga'
+    )
+    ch_cargado= fields.Boolean(
+        string='Cargado'
+    )
+    ch_revisado= fields.Boolean(
+        string='Revisado'
+    )
+    ch_diferencia= fields.Boolean(
+        string='Diferencia'
+    )

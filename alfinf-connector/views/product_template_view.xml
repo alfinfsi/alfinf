@@ -15,17 +15,17 @@
                 <page name="formato" string="Formato" attrs="{'invisible': [('is_format', '=', False)]}" class="d-flex">
                     <group class="d-flex justify-content-between">
                         <!-- Añadir nuevos campos aquí -->
-                        <div class="d-inline-block">
-                            <label for="is_in"/>
-                            <field name="is_in"/>
+                        <div class="d-flex">
+                            <label for="is_in" class="m-1"/>
+                            <field name="is_in" class="m-1"/>
                         </div>
-                        <div class="d-inline-block">
-                            <label for="is_out"/>
-                            <field name="is_out"/>
+                        <div class="d-flex">
+                            <label for="is_out" class="m-1"/>
+                            <field name="is_out" class="m-1"/>
                         </div>
-                        <div class="d-inline-block">
-                            <label for="granel"/>
-                            <field name="granel"/>
+                        <div class="d-flex">
+                            <label for="granel" class="m-1"/>
+                            <field name="granel" class="m-1"/>
                         </div>
                     </group>
                     <group class="d-flex justify-content-between">
@@ -48,7 +48,7 @@
                             <label for="euro_coste_envase"/>
                             <field name="euro_coste_envase"/>
                         </div>
-                        <div class="d-inline-block">
+                        <div class="">
                             <label for="coste_formato"/>
                             <field name="coste_formato"/>
                         </div>

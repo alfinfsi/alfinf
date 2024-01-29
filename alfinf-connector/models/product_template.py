@@ -8,63 +8,63 @@ class ProductTemplate(models.Model):
     _inherit = "product.template"
 
     is_format = fields.Boolean(
-        string='Formato'
+        string='Formato '
     )
 
     #campos de la tabla formato
     is_in = fields.Boolean(
-        string='Formato de entrada'
+        string='Formato de entrada '
     )
     is_out = fields.Boolean(
-        string='Formato de salida'
+        string='Formato de salida '
     )
     granel = fields.Boolean(
-        string="Granel"
+        string="Granel "
     )
     ft_kgFormato = fields.Float(
-        string="Kilos",
+        string="Kilos ",
         digits=(16, 2)
     )
     ft_grnvase = fields.Float(
-        string="Kilos Formato"
+        string="Kilos Formato "
     )
     euro_coste_envase = fields.Integer(
-        string="Coste por envase"
+        string="Coste por envase "
     )
     piezas = fields.Integer(
-        string="Piezas"
+        string="Piezas "
     )
     gr_pieza = fields.Float(
-        string="gramos piezas",
+        string="gramos piezas ",
         compute='_compute_gr_piezas'
     )
     categoria = fields.Integer(
-        string="Categoria",
+        string="Categoria ",
         default=1,
         domain=[
             ('>=', 0)
         ]
     )
     unidades = fields.Integer(
-        string="Unidades",
+        string="Unidades ",
         domain=[
             ('>=', 1)
         ]
     )
     peso_entrada = fields.Float(
-        string="Peso entrada",
+        string="Peso entrada ",
         digits=(16, 2)
     )
     peso_salida = fields.Float(
-        string="Peso salida",
+        string="Peso salida ",
         digits=(16, 2)
     )
     coste_formato = fields.Float(
-        string="Coste formato",
+        string="Coste formato ",
         digits=(16, 2)
     )
     kg_plastico = fields.Float(
-        string="Kilos de plastico no reciclados"
+        string="Kilos de plastico no reciclados "
     )
 
     # Campos calculados

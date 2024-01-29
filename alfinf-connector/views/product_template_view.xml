@@ -83,6 +83,29 @@
                             <field name="peso_salida"/>
                         </div>
                     </group>
+                    <hr/>
+                    <group class="d-flex justify-content-between">
+                        <div class="d-inline-block">
+                            <label for="ch_tapa" class="m-1"/>
+                            <field name="ch_tapa" class="m-1"/>
+                        </div>
+                        <div class="d-inline-block">
+                            <label for="ch_etiqueta" class="m-1"/>
+                            <field name="ch_etiqueta" class="m-1"/>
+                        </div>
+                        <div class="d-inline-block">
+                            <label for="ch_cabito" class="m-1"/>
+                            <field name="ch_cabito" class="m-1"/>
+                        </div>
+                        <div class="d-inline-block">
+                            <label for="ch_termosellado" class="m-1"/>
+                            <field name="ch_termosellado" class="m-1"/>
+                        </div>
+                        <div class="d-inline-block">
+                            <label for="ch_almohadilla" class="m-1"/>
+                            <field name="ch_almohadilla" class="m-1"/>
+                        </div>
+                    </group>
                 </page>
             </xpath>
         </field>

@@ -69,6 +69,21 @@ class ProductTemplate(models.Model):
         string="Kilos de plastico no reciclados ",
         digits=(16, 3)
     )
+    ch_tapa = fields.Boolean(
+        string="Tapa"
+    )
+    ch_etiqueta= fields.Boolean(
+        string="Etiqueta"
+    )
+    ch_cabito = fields.Boolean(
+        string="Cabito"
+    )
+    ch_termosellado = fields.Boolean(
+        string="Termosellado"
+    )
+    ch_almohadilla = fields.Boolean(
+        string="Almohadilla"
+    )
 
     # Campos calculados
     @api.depends('ft_kgFormato', 'piezas')
@@ -78,3 +93,5 @@ class ProductTemplate(models.Model):
                 product.gr_pieza = product.ft_kgFormato / product.piezas
             else:
                 product.gr_pieza = 0
+
+    # añadir con tapa, sin tapa, con etiqueta sin etiqueta, cabito , sin cabito, termosellado flowpack, sin termosellado, almohadilla, sin almohadilla

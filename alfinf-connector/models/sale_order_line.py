@@ -7,4 +7,32 @@ from odoo import fields, models, api
 class SaleOrderLine(models.Model):
     _inherit = "sale.order.line"
 
-    eco = fields.Char(string="ECO")
+    eco = fields.Boolean(
+        string="ECO",
+    )
+    alfinf_trace_ids = fields.One2many(
+        string='Traza',
+        comodel_name='alfinf.trace',
+        inverse_name='res_partner_id'
+    )
+    alfinf_detalle = fields.Char(
+        string='Detalle',
+    )
+    alfinf_marca_id = fields.Char(
+        string='Marca',
+    )
+    caja = fields.Char(
+        string='Caja',
+    )
+    palet_id = fields.Char(
+        string='Palet',
+    )
+    fecha_entrada = fields.Date(
+        string='fecha_entrada',
+    )
+    administrativo = fields.Boolean(
+        string='Administrativo',
+    )
+    updateTime = fields.Datetime(
+        string='Administrativo',
+    )

@@ -44,9 +44,9 @@ class AlfinfTrace(models.Model):
         string="Cliente",
         comodel_name="res.partner"
     )
-    variedad_id = fields.Char(
-        string="Variedad"
-        #comodel_name="variedad"
+    variedad_id = fields.Many2one(
+        string="Variedad",
+        comodel_name="alfinf.variedad"
     )
     vivero_id = fields.Char(
         string = "Vivero"

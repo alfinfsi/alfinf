@@ -6,6 +6,7 @@ from odoo import fields, models
 
 class AlfinfVariedad(models.Model):
     _name= "alfinf.variedad"
+    _rec_name = "nombre"
 
     nombre= fields.Char(
         string="nombre"

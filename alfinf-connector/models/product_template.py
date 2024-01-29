@@ -23,10 +23,11 @@ class ProductTemplate(models.Model):
     )
     ft_kgFormato = fields.Float(
         string="Kilos ",
-        digits=(16, 2)
+        digits=(16, 4)
     )
     ft_grnvase = fields.Float(
-        string="Kilos Formato "
+        string="Kilos Formato ",
+        digits=(16, 4)
     )
     euro_coste_envase = fields.Integer(
         string="Coste por envase "
@@ -53,18 +54,19 @@ class ProductTemplate(models.Model):
     )
     peso_entrada = fields.Float(
         string="Peso entrada ",
-        digits=(16, 2)
+        digits=(16, 4)
     )
     peso_salida = fields.Float(
         string="Peso salida ",
-        digits=(16, 2)
+        digits=(16, 4)
     )
     coste_formato = fields.Float(
         string="Coste formato ",
-        digits=(16, 2)
+        digits=(16, 4)
     )
     kg_plastico = fields.Float(
-        string="Kilos de plastico no reciclados "
+        string="Kilos de plastico no reciclados ",
+        digits=(16, 4)
     )
 
     # Campos calculados

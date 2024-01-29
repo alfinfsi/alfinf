@@ -22,11 +22,11 @@ class ProductTemplate(models.Model):
         string="Granel "
     )
     ft_kgFormato = fields.Float(
-        string="Kilos ",
+        string="Kilos",
         digits=(16, 3)
     )
     ft_grnvase = fields.Float(
-        string="Kilos Formato ",
+        string="Kilos Formato",
         digits=(16, 3)
     )
     euro_coste_envase = fields.Integer(
@@ -36,7 +36,7 @@ class ProductTemplate(models.Model):
         string="Piezas "
     )
     gr_pieza = fields.Float(
-        string="gramos piezas ",
+        string="Kilos por piezas",
         digits=(16, 4),
         compute='_compute_gr_piezas'
     )

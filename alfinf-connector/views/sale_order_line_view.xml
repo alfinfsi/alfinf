@@ -17,8 +17,7 @@
                     <field name="alfinf_detalle" />
                     <field name="fecha_entrada" />
                     <field name="administrativo" />
-                    <field name="eco" />
-                    <field name="name"/>
+                    <field name="updateTime" />
                 </xpath>
             </field>
         </record>

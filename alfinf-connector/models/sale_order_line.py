@@ -8,7 +8,7 @@ class SaleOrderLine(models.Model):
     _inherit = "sale.order.line"
 
     name = fields.Char(
-        string="ECO",
+        string="Description",
     )
     eco = fields.Boolean(
         string="ECO",
@@ -18,7 +18,7 @@ class SaleOrderLine(models.Model):
         comodel_name="alfinf.trace",
     )
     alfinf_detalle = fields.Char(
-        string='Detalle',
+        string='Detalles',
     )
     alfinf_marca_id = fields.Char(
         string='Marca',
@@ -30,11 +30,11 @@ class SaleOrderLine(models.Model):
         string='Palet',
     )
     fecha_entrada = fields.Date(
-        string='fecha_entrada',
+        string='Fecha de entrada',
     )
     administrativo = fields.Boolean(
         string='Administrativo',
     )
     updateTime = fields.Datetime(
-        string='Administrativo',
+        string='Fecha modificacion',
     )

@@ -15,3 +15,22 @@ class AlfinfFinca(models.Model):
     hectareas_producidas = fields.Integer(
         string="Hectareas producidas",
     )
+    municipio = fields.Char(
+        string="Municipio"
+    )
+    poligono = fields.Char(
+        string="Parcela"
+    )
+    country_id = fields.Many2one(
+        string='Pais',
+        comodel_name='res.country',
+        inverse_name='alfinf_finca_id'
+    )
+    provincia_id = fields.Many2one(
+        string='Provincia',
+        comodel_name='res.country.state',
+        inverse_name='alfinf_finca_id'
+    )
+    recinto = fields.Integer(
+        string="Recinto"
+    )

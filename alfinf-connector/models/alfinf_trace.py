@@ -51,4 +51,6 @@ class AlfinfTrace(models.Model):
     vivero_id = fields.Char(
         string = "Vivero"
     )
-    active = fields.Boolean(default=True)
+    active = fields.Boolean(
+        default=True
+    )

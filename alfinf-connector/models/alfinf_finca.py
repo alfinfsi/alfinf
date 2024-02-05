@@ -6,8 +6,9 @@ from odoo import fields, models
 
 class AlfinfFinca(models.Model):
     _name = "alfinf.finca"
+    _rec_name = "nombre"
 
-    finca = fields.Char(
+    nombre = fields.Char(
         string="Finca",
         required=True,
         help="Nombre de la finca",
@@ -19,7 +20,7 @@ class AlfinfFinca(models.Model):
         string="Municipio"
     )
     poligono = fields.Char(
-        string="Parcela"
+        string="poligono"
     )
     country_id = fields.Many2one(
         string='Pais',
@@ -31,6 +32,7 @@ class AlfinfFinca(models.Model):
         comodel_name='res.country.state',
         inverse_name='alfinf_finca_id'
     )
-    recinto = fields.Integer(
-        string="Recinto"
+    recintos_ids = fields.One2many(
+        string='Recintos',
+        comodel_name='alfinf.recinto'
     )

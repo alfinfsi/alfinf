@@ -20,8 +20,11 @@
                             <field name="provincia_id"/>
                         </group>
                         <group>
-                            <field name="hectareas_producidas"/>
+                        <!--    <field name="hectareas_producidas"/>-->
                             <field name="poligono"/>
+                        </group>
+                        <group>
+                            <field name="recintos_ids"/>
                         </group>
                     </group>
                 </sheet>

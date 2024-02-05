@@ -5,13 +5,13 @@ import string
 from odoo import fields, models
 
 class AlfinfRecinto(models.Model):
-    _name = "alfinf.recinto"
-    _description = "Recinto"
-    _rec_name = "recinto"
+    _name = 'alfinf.recinto'
+    _description = 'Recinto'
+    _rec_name = 'recinto'
 
     recinto = fields.Char(
-        string="Recinto",
+        string='Recinto',
     )
     hectareas_producidas = fields.Integer(
-        string="Hectareas producidas",
+        string='Hectareas producidas',
     )

@@ -5,17 +5,18 @@ from odoo import fields, models, api
 
 
 class SaleOrderLine(models.Model):
-    _inherit = "sale.order.line"
+    _inherit = 'sale.order.line'
+
 
     name = fields.Char(
-        string="Description",
+        string='Description',
     )
     eco = fields.Boolean(
-        string="ECO",
+        string='ECO',
     )
     alfinf_trace_ids = fields.Many2one(
-        string="Traza",
-        comodel_name="alfinf.trace",
+        string='Traza',
+        comodel_name='alfinf.trace',
     )
     alfinf_detalle = fields.Char(
         string='Detalles',

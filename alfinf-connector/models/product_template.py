@@ -5,85 +5,79 @@ from odoo import fields, models, api
 
 
 class ProductTemplate(models.Model):
-    _inherit = "product.template"
+    _inherit = 'product.template'
+    _description = 'Product Template'
 
     is_format = fields.Boolean(
-        string='Formato '
+        string='Formato'
     )
-
     #campos de la tabla formato
     is_in = fields.Boolean(
-        string='Formato de entrada '
+        string='Formato de entrada'
     )
     is_out = fields.Boolean(
-        string='Formato de salida '
+        string='Formato de salida'
     )
     granel = fields.Boolean(
-        string="Granel "
+        string='Granel'
     )
     ft_kgFormato = fields.Float(
-        string="Kilos",
+        string='Kilos',
         digits=(16, 3)
     )
     ft_grnvase = fields.Float(
-        string="Kilos Formato",
+        string='Kilos Formato',
         digits=(16, 3)
     )
     euro_coste_envase = fields.Integer(
-        string="Coste por envase "
+        string='Coste por envase'
     )
     piezas = fields.Integer(
-        string="Piezas "
+        string='Piezas '
     )
     gr_pieza = fields.Float(
-        string="Kilos por piezas",
+        string='Kilos por piezas',
         digits=(16, 4),
         compute='_compute_gr_piezas'
     )
-    categoria = fields.Integer(
-        string="Categoria ",
-        default=1,
-        domain=[
-            ('>=', 0)
-        ]
+    categoria= fields.Integer(
+        string='Categoria',
+        default=1
     )
     unidades = fields.Integer(
-        string="Unidades ",
-        domain=[
-            ('>=', 1)
-        ]
+        string='Unidades'
     )
     peso_entrada = fields.Float(
-        string="Peso entrada ",
+        string='Peso entrada',
         digits=(16, 3)
     )
     peso_salida = fields.Float(
-        string="Peso salida ",
+        string='Peso salida',
         digits=(16, 3)
     )
     coste_formato = fields.Float(
-        string="Coste formato ",
+        string='Coste formato',
         digits=(16, 3)
     )
     kg_plastico = fields.Float(
-        string="Kilos de plastico no reciclados ",
+        string='Kilos de plastico no reciclados',
         digits=(16, 3)
     )
 
     # ch_tapa = fields.Boolean(
-        # string="Tapa"
+        # string='Tapa'
     # )
     # ch_etiqueta= fields.Boolean(
-        # string="Etiqueta"
+        # string='Etiqueta'
     # )
     # ch_cabito = fields.Boolean(
-        # string="Cabito"
+        # string='Cabito'
     # )
     # ch_termosellado = fields.Boolean(
-        # string="Termosellado"
+        # string='Termosellado'
     # )
     # ch_almohadilla = fields.Boolean(
-        # string="Almohadilla"
+        # string='Almohadilla'
     # )
 
     # Campos calculados

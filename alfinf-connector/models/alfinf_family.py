@@ -6,17 +6,17 @@ from odoo import fields, models
 
 
 class AlfinfFamily(models.Model):
-    _name = "alfinf.family"
-    _rec_name = "familia"   #En las relaciones, este es el campo que se muestra
+    _name = 'alfinf.family'
+    _description = 'Familia'
+    _rec_name = 'familia'   #En las relaciones, este es el campo que se muestra
 
     familia = fields.Char(
-        string="Familia",
+        string='Familia',
         tracking=True
     )
     cod_intrastat = fields.Char(
-        string="id_intrastat",
+        string='id_intrastat',
     )
     cgn = fields.Char(
-        string="CGN"
+        string='CGN'
     )
-

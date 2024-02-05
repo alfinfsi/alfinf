@@ -5,7 +5,8 @@ from odoo import fields, models
 
 
 class SaleOrder(models.Model):
-    _inherit = "sale.order"
+    _inherit = 'sale.order'
+
 
     alfinf_avfid = fields.Integer(
         string='Alfinf ID'

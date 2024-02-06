@@ -40,6 +40,9 @@
         <!-- Tabla de fincas -->
             <tree string="Fincas" multi_edit="1" duplicate="false" sample="1">
                 <field name="nombre"/>
+                <field name="provincia_id"/>
+                <field name="municipio"/>
+                <field name="poligono"/>
             </tree>
         </field>
     </record>

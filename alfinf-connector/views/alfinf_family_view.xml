@@ -35,6 +35,8 @@
         <!-- Tabla de trazas -->
             <tree string="Trazas" multi_edit="1" duplicate="false" sample="1">
                 <field name="familia"/>
+                <field name="cod_intrastat"/>
+                <field name="cgn"/>
             </tree>
         </field>
     </record>

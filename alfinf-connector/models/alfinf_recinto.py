@@ -12,6 +12,11 @@ class AlfinfRecinto(models.Model):
     recinto = fields.Char(
         string='Recinto',
     )
-    hectareas_producidas = fields.Integer(
+    hectareas_producidas = fields.Float(
         string='Hectareas producidas',
+    )
+    finca_id = fields.Many2one(
+        string='Finca',
+        comodel_name='alfinf.finca',
+        inverse_name='alfinf_recinto_id'
     )

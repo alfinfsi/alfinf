@@ -7,10 +7,10 @@
             <form string="finca">
                 <sheet name="finca_form">
                     <div class="oe_title">
-                        <label for="finca" string="Nombre"/>
+                        <label for="nombre" string="Nombre"/>
                         <h1>
                             <div class="d-flex">
-                                <field class="text-break" name="finca" placeholder="Nombre de la finca"/>
+                                <field class="text-break" name="nombre" placeholder="Nombre de la finca"/>
                             </div>
                         </h1>
                     </div>
@@ -24,7 +24,7 @@
                             <field name="poligono"/>
                         </group>
                         <group>
-                            <field name="recintos_ids"/>
+                            <field name="recinto_ids"/>
                         </group>
                     </group>
                 </sheet>
@@ -39,7 +39,7 @@
         <field name="arch" type="xml">
         <!-- Tabla de fincas -->
             <tree string="Fincas" multi_edit="1" duplicate="false" sample="1">
-                <field name="finca"/>
+                <field name="nombre"/>
             </tree>
         </field>
     </record>
@@ -49,7 +49,7 @@
         <field name="model">alfinf.finca</field>
         <field name="arch" type="xml">
             <search string="Finca busqueda">
-                <field name="finca" string="Fincas" required="1"/>
+                <field name="nombre" string="Fincas" required="1"/>
             </search>
         </field>
     </record>

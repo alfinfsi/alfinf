@@ -32,3 +32,8 @@ class AlfinfFinca(models.Model):
         comodel_name='res.country.state',
         inverse_name='alfinf_finca_id'
     )
+    recinto_ids = fields.One2many(
+        string='Recinto',
+        comodel_name='alfinf.recinto',
+        inverse_name='finca_id'
+    )

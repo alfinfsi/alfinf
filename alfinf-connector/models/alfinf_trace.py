@@ -6,50 +6,50 @@ from odoo import fields, models
 
 
 class AlfinfTrace(models.Model):
-    _name = "alfinf.trace"
-    _inherit = ["mail.thread"]
+    _name = 'alfinf.trace'
+    _inherit = ['mail.thread']
 
     name = fields.Char(
-        string="Traza",
+        string='Traza',
         tracking=True
     )
     tz_hectarea = fields.Char(
-        string="Traza hectarea"
+        string='Traza hectarea'
     )
     campania = fields.Char(
-        string ="Camapaña"
+        string ='Camapaña'
     )
     id_sector=fields.Integer(
-        string ="sector"
+        string ='sector'
     )
     eco = fields.Boolean(
-        string="Eco"
+        string='Eco'
     )
     ggn = fields.Char(
-        string="GGN"
+        string='GGN'
     )
     tz_parcela = fields.Char(
-        string="Traza parcela"
+        string='Traza parcela'
     )
     tz_columna = fields.Char(
-        string="Traza columna"
+        string='Traza columna'
     )
     tz_planta = fields.Char(
-        string="Traza planta"
+        string='Traza planta'
     )
     replante = fields.Char(
-        string="Repelente"
+        string='Repelente'
     )
     res_partner_id = fields.Many2one(
-        string="Cliente",
-        comodel_name="res.partner"
+        string='Cliente',
+        comodel_name='res.partner'
     )
     variedad_id = fields.Many2one(
-        string="Variedad",
-        comodel_name="alfinf.variedad"
+        string='Variedad',
+        comodel_name='alfinf.variedad'
     )
     vivero_id = fields.Char(
-        string = "Vivero"
+        string = 'Vivero'
     )
     active = fields.Boolean(
         default=True

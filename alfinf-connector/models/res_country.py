@@ -5,7 +5,7 @@ import string
 from odoo import fields, models
 
 class ResCountry(models.Model):
-    _inherit = "res.country"
+    _inherit = 'res.country'
 
 
     alfinf_finca_ids= fields.One2many(

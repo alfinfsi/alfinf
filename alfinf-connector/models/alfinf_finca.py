@@ -5,19 +5,19 @@ import string
 from odoo import fields, models
 
 class AlfinfFinca(models.Model):
-    _name = "alfinf.finca"
-    _rec_name = "nombre"
+    _name = 'alfinf.finca'
+    _rec_name = 'nombre'
 
     nombre = fields.Char(
-        string="Finca",
+        string='Finca',
         required=True,
-        help="Nombre de la finca",
+        help='Nombre de la finca',
     )
     hectareas_producidas = fields.Integer(
-        string="Hectareas producidas",
+        string='Hectareas producidas',
     )
     municipio = fields.Char(
-        string="Municipio"
+        string='Municipio'
     )
     poligono = fields.Char(
         string="poligono"

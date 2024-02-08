@@ -1,10 +1,3 @@
-from . import sale_order
-from . import sale_order_line
-from . import res_partner
-from . import product_template
-from . import alfinf_trace
-from . import alfinf_family
-from . import alfinf_finca
-from . import alfinf_variedad
-from . import alfinf_recinto
-from . import res_country
+from . import (alfinf_family, alfinf_finca, alfinf_recinto, alfinf_trace,
+               alfinf_variedad, product_template, res_country, res_partner,
+               sale_order, sale_order_line)

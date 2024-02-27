@@ -28,8 +28,10 @@ class AlfinfTrace(models.Model):
     ggn = fields.Char(
         string='GGN'
     )
-    tz_parcela = fields.Char(
-        string='Traza parcela'
+    tz_recinto_id = fields.Many2one(
+        string='Traza recinto',
+        comodel_name='alfinf.recinto',
+        inverse_name='alfinf_trace_id'
     )
     tz_columna = fields.Char(
         string='Traza columna'

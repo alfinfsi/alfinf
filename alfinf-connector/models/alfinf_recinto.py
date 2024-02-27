@@ -20,3 +20,8 @@ class AlfinfRecinto(models.Model):
         comodel_name='alfinf.finca',
         inverse_name='alfinf_recinto_id'
     )
+    traza_id = fields.One2many(
+        string='Traza',
+        comodel_name='alfinf.trace',
+        inverse_name='tz_recinto_id'
+    )

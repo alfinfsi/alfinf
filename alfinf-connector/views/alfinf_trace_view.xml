@@ -20,7 +20,7 @@
                     <group>
                         <group>
                             <field name="res_partner_id" widget="many2one_tags"/>
-                            <field name="tz_parcela"/>
+                            <field name="tz_recinto_id"/>
                             <field name="campania"/>
                             <field name="tz_hectarea"/>
                         </group>
@@ -47,7 +47,7 @@
         <!-- Tabla de trazas -->
             <tree string="Trazas" multi_edit="1" duplicate="false" sample="1">
                 <field name="name"/>
-                <field name="tz_parcela"/>
+                <field name="tz_recinto_id"/>
                 <field name="tz_columna"/>
                 <field name="tz_hectarea"/>
                 <field name="tz_planta"/>

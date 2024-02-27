@@ -21,6 +21,7 @@
                         <group>
                             <field name="res_partner_id" widget="many2one_tags"/>
                             <field name="tz_parcela"/>
+                            <field name="campania"/>
                             <field name="tz_hectarea"/>
                         </group>
                         <group>

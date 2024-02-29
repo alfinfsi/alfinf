@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_alfinf_recinto_form" model="ir.ui.view">
+        <field name="name">alfinf.recinto.form</field>
+        <field name="model">alfinf.recinto</field>
+        <field name="arch" type="xml">
+            <form string="Recinto">
+                <sheet name="recinto_form">
+                    <div class="oe_title">
+                        <label for="recinto" string="Nombre"/>
+                        <h1>
+                            <div class="d-flex">
+                                <field class="text-break text-capitalize" name="recinto" placeholder="Nombre del recinto"/>
+                            </div>
+                        </h1>
+                    </div>
+                    <group>
+                            <field name="hectareas_producidas"/>
+                            <field name="finca_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_alfinf_recinto_tree" model="ir.ui.view">
+        <field name="name">alfinf.recinto.tree</field>
+        <field name="model">alfinf.recinto</field>
+        <field name="arch" type="xml">
+            <tree string="Recintos">
+                <field name="recinto"/>
+                <field name="hectareas_producidas"/>
+                <field name="finca_id"/>
+            </tree>
+        </field>
+    </record>
+    <record id="action_alfinf_recinto" model="ir.actions.act_window">
+        <field name="name">Recintos</field>
+        <field name="res_model">alfinf.recinto</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="alfinf.view_alfinf_recinto_tree"/>
+    </record>
+    <menuitem
+        id="menu_alfinf_recinto"
+        name="Recintos"
+        parent="sale.sale_menu_root"
+        sequence="50"
+        action="alfinf-connector.action_alfinf_recinto"
+        groups="base.group_system"
+    />
+
+</odoo>

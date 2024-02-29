@@ -4,40 +4,60 @@
         <field name="name">alfinf.recinto.form</field>
         <field name="model">alfinf.recinto</field>
         <field name="arch" type="xml">
-            <form string="Recinto">
+            <form string="recinto">
                 <sheet name="recinto_form">
                     <div class="oe_title">
                         <label for="recinto" string="Nombre"/>
                         <h1>
                             <div class="d-flex">
-                                <field class="text-break text-capitalize" name="recinto" placeholder="Nombre del recinto"/>
+                                <field class="text-break" name="recinto" placeholder="Nombre de la recinto"/>
                             </div>
                         </h1>
                     </div>
                     <group>
-                            <field name="hectareas_producidas"/>
-                            <field name="finca_id"/>
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
-    <record id="view_alfinf_recinto_tree" model="ir.ui.view">
-        <field name="name">alfinf.recinto.tree</field>
+
+    <record id="alfinf_recinto_tree_view" model="ir.ui.view">
+        <field name="name">alfinf.recinto.tree.view</field>
+        <field name="model">alfinf.recinto</field>
+        <field eval="7" name="priority"/>
+        <field name="arch" type="xml">
+        <!-- Tabla de recintos -->
+            <tree string="Fincas" multi_edit="1" duplicate="false" sample="1">
+                <field name="recinto"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="alfinf_recinto_search" model="ir.ui.view">
+        <field name="name">alfinf.recinto.search</field>
         <field name="model">alfinf.recinto</field>
         <field name="arch" type="xml">
-            <tree string="Recintos">
-                <field name="recinto"/>
-                <field name="hectareas_producidas"/>
-                <field name="finca_id"/>
-            </tree>
+            <search string="Finca busqueda">
+                <field name="recinto" string="Recintos" required="1"/>
+            </search>
         </field>
     </record>
     <record id="action_alfinf_recinto" model="ir.actions.act_window">
         <field name="name">Recintos</field>
+        <field name="type">ir.actions.act_window</field>
         <field name="res_model">alfinf.recinto</field>
-        <field name="view_mode">tree,form</field>
-        <field name="view_id" ref="alfinf.view_alfinf_recinto_tree"/>
+        <field name="view_mode">kanban,tree,form,activity</field>
+        <field name="context">{}</field>
+        <field name="view_id" ref="alfinf-connector.alfinf_recinto_tree_view"/>
+        <field name="search_view_id" ref="alfinf-connector.alfinf_recinto_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Crea una nueva recinto
+            </p>
+            <p>
+                Puedes crear una nueva recinto, para asociarla a un cliente.
+            </p>
+        </field>
     </record>
     <menuitem
         id="menu_alfinf_recinto"
@@ -47,5 +67,4 @@
         action="alfinf-connector.action_alfinf_recinto"
         groups="base.group_system"
     />
-
 </odoo>

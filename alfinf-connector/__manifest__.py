@@ -25,6 +25,7 @@
         "views/alfinf_family_view.xml",
         "views/alfinf_finca_view.xml",
         "views/alfinf_variedad_view.xml",
+        "views/alfinf_recinto_view.xml"
     ],
     "installable": True,
 }

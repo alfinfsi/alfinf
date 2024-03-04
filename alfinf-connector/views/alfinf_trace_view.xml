@@ -87,7 +87,7 @@
         id="menu_alfinf_tace"
         name="Trazas"
         parent="sale.sale_menu_root"
-        sequence="50"
+        sequence="131"
         action="alfinf-connector.action_alfinf_trace"
         groups="base.group_system"
     />

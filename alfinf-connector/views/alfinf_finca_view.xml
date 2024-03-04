@@ -77,7 +77,7 @@
         id="menu_alfinf_finca"
         name="Fincas"
         parent="sale.sale_menu_root"
-        sequence="50"
+        sequence="111"
         action="alfinf-connector.action_alfinf_finca"
         groups="base.group_system"
     />

@@ -70,7 +70,7 @@
         id="menu_alfinf_parcela"
         name="Parcelas"
         parent="sale.sale_menu_root"
-        sequence="50"
+        sequence="121"
         action="alfinf-connector.action_alfinf_parcela"
         groups="base.group_system"
     />

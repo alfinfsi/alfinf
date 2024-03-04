@@ -49,7 +49,7 @@
             id="menu_alfinf_variedad"
             name="Variedades"
             parent="sale.sale_menu_root"
-            sequence="52"
+            sequence="152"
             action="alfinf-connector.action_alfinf_variedad"
             groups="base.group_system"
         />

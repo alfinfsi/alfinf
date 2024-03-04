@@ -72,7 +72,7 @@
         id="menu_alfinf_family"
         name="Familias"
         parent="sale.sale_menu_root"
-        sequence="51"
+        sequence="151"
         action="alfinf-connector.action_alfinf_family"
         groups="base.group_system"
     />

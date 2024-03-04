@@ -7,6 +7,10 @@ from odoo import fields, models, api
 class AlfinfFinca(models.Model):
     _name = 'alfinf.finca'
     _rec_name = 'nombre'
+    _sql_constraints = [
+        #('alfinf_finca_nombre_uniq', 'unique(nombre)', 'Ya existe'),
+    ]
+
 
     nombre = fields.Char(
         string='Finca',
@@ -32,9 +36,9 @@ class AlfinfFinca(models.Model):
         comodel_name='res.country.state',
         inverse_name='alfinf_finca_id'
     )
-    recinto_ids = fields.One2many(
-        string='Recinto',
-        comodel_name='alfinf.recinto',
+    parcela_ids = fields.One2many(
+        string='parcela',
+        comodel_name='alfinf.parcela',
         inverse_name='finca_id'
     )
 
@@ -42,6 +46,3 @@ class AlfinfFinca(models.Model):
     #   @api.onchange('provincia_id')
     #   def onchange_country_id(self):
     #       self.env.cr.execute("ALTER TABLE alfinf_finca DROP CONSTRAINT alfinf_finca_nombre_uniq;")
-
-
-

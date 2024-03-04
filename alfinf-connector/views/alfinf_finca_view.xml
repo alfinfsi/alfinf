@@ -24,7 +24,7 @@
                             <field name="poligono"/>
                         </group>
                         <group>
-                            <field name="recinto_ids"/>
+                            <field name="parcela_ids"/>
                         </group>
                     </group>
                 </sheet>

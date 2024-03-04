@@ -15,6 +15,13 @@
                         </h1>
                     </div>
                     <group>
+                        <group>
+                            <field name="hectareas_producidas"/>
+                            <field name="finca_id"/>
+                        </group>
+                        <group>
+                            <field name="traza_id"/>
+                        </group>
                     </group>
                 </sheet>
             </form>
@@ -38,12 +45,12 @@
         <field name="model">alfinf.parcela</field>
         <field name="arch" type="xml">
             <search string="Finca busqueda">
-                <field name="parcela" string="Recintos" required="1"/>
+                <field name="parcela" string="Parcelas" required="1"/>
             </search>
         </field>
     </record>
     <record id="action_alfinf_parcela" model="ir.actions.act_window">
-        <field name="name">Recintos</field>
+        <field name="name">Parcela</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">alfinf.parcela</field>
         <field name="view_mode">kanban,tree,form,activity</field>
@@ -61,7 +68,7 @@
     </record>
     <menuitem
         id="menu_alfinf_parcela"
-        name="Recintos"
+        name="Parcelas"
         parent="sale.sale_menu_root"
         sequence="50"
         action="alfinf-connector.action_alfinf_parcela"

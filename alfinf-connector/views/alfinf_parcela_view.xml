@@ -14,15 +14,8 @@
                             </div>
                         </h1>
                     </div>
-                    <group>
-                        <group>
-                            <field name="hectareas_producidas"/>
-                            <field name="finca_id"/>
-                        </group>
-                        <group>
-                            <field name="traza_id"/>
-                        </group>
-                    </group>
+                        <field name="hectareas_producidas"/>
+                        <field name="finca_id"/>
                 </sheet>
             </form>
         </field>

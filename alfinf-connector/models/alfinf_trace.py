@@ -31,7 +31,7 @@ class AlfinfTrace(models.Model):
     tz_parcela_id = fields.Many2one(
         string='Traza parcela',
         comodel_name='alfinf.parcela',
-        inverse_name='alfinf_trace_id'
+        inverse_name='trace_ids'
     )
     tz_columna = fields.Char(
         string='Traza columna'

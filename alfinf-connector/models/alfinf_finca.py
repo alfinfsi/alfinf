@@ -41,6 +41,11 @@ class AlfinfFinca(models.Model):
         comodel_name='alfinf.parcela',
         inverse_name='finca_id'
     )
+    trace_ids = fields.Many2one(
+        string='Traza',
+        comodel_name='alfinf.trace',
+        inverse_name='tz_parcela_id'
+    )
 
     #   Eliminar constraint
     #   @api.onchange('provincia_id')

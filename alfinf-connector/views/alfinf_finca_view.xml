@@ -22,10 +22,11 @@
                         <group>
                         <!--    <field name="hectareas_producidas"/>-->
                             <field name="poligono"/>
+                            <field name="trace_ids"/>
                         </group>
-                        <group>
-                            <field name="parcela_ids"/>
-                        </group>
+                    </group>
+                    <group>
+                        <field name="parcela_ids"/>
                     </group>
                 </sheet>
             </form>
@@ -43,6 +44,7 @@
                 <field name="provincia_id"/>
                 <field name="municipio"/>
                 <field name="poligono"/>
+                <!--<field name="trace_ids"/>-->
             </tree>
         </field>
     </record>

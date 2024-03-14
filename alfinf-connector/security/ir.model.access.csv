@@ -4,3 +4,4 @@ access_alfinf_family_user,access_alfinf_family_user,model_alfinf_family,base.gro
 access_alfinf_variedad_user,access_alfinf_variedad_user,model_alfinf_variedad,base.group_user,1,1,1,1
 access_alfinf_finca_user,access_alfinf_finca_user,model_alfinf_finca,base.group_user,1,1,1,1
 access_alfinf_parcela_user,access_alfinf_parcela_user,model_alfinf_parcela,base.group_user,1,1,1,1
+access_alfinf_marca_user,access_alfinf_marca_user,model_alfinf_marca,base.group_user,1,1,1,1

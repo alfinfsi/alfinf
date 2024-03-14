@@ -25,4 +25,3 @@ class ResPartner(models.Model):
         comodel_name='alfinf.trace',
         inverse_name='res_partner_id'
     )
-

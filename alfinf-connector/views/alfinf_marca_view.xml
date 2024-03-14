@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_alfinf_marca_form" model="ir.ui.view">
+        <field name="name">alfinf.marca.form</field>
+        <field name="model">alfinf.marca</field>
+        <field name="arch" type="xml">
+            <form string="marca">
+                <sheet name="marca_form">
+                    <div class="oe_title">
+                        <label for="marca" string="Nombre"/>
+                        <h1>
+                            <div class="d-flex">
+                                <field class="text-break text-capitalize" name="marca" placeholder="Nombre de la marca"/>
+                            </div>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="cmr"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_alfinf_marca_tree" model="ir.ui.view">
+        <field name="name">alfinf.marca.tree</field>
+        <field name="model">alfinf.marca</field>
+        <field name="arch" type="xml">
+            <tree string="Marcas">
+                <field name="marca"/>
+                <field name="cmr"/>
+            </tree>
+        </field>
+    </record>
+    <record id="action_alfinf_marca" model="ir.actions.act_window">
+        <field name="name">Marcas</field>
+        <field name="res_model">alfinf.marca</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+            id="menu_alfinf_marca"
+            name="Marcas"
+            parent="sale.sale_menu_root"
+            sequence="153"
+            action="alfinf-connector.action_alfinf_marca"
+            groups="base.group_system"
+        />
+
+</odoo>

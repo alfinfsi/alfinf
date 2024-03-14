@@ -50,9 +50,6 @@ class AlfinfTrace(models.Model):
         string='Variedad',
         comodel_name='alfinf.variedad'
     )
-    vivero_id = fields.Char(
-        string = 'Vivero'
-    )
     active = fields.Boolean(
         default=True
     )
